@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import VideoRecorder from 'react-video-recorder'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <VideoRecorder
+          onRecordingComplete={(videoBlob) => {
+            // Do something with the video...
+            console.log('videoBlob', videoBlob)
+          }}
+          timeLimit={10000}
+        />
     </div>
   );
 }

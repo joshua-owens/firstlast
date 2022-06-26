@@ -1,4 +1,5 @@
 import React from 'react';
+import { LockClosedIcon } from '@heroicons/react/solid';
 
 export default function Login() {
     return (

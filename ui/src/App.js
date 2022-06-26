@@ -1,22 +1,20 @@
 import React from 'react'
 import './App.css'
-import VideoRecorder from 'react-video-recorder'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './pages/Login'
+import Home from './pages/Home'
+import Layout from './layout'
 
 function App () {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-          Hello world!
-      </h1>
-      <VideoRecorder
-        onRecordingComplete={(videoBlob) => {
-          // Do something with the video...
-          console.log('videoBlob', videoBlob)
-        }}
-        timeLimit={10000}
-        isOnInitially={true}
-      />
-    </div>
+    <Layout>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </Layout>
   )
 }
 

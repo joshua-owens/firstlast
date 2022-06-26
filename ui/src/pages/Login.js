@@ -1,9 +1,9 @@
-import React from 'react';
-import { LockClosedIcon } from '@heroicons/react/solid';
+import React from 'react'
+import { LockClosedIcon } from '@heroicons/react/solid'
 
-export default function Login() {
-    return (
-        <>
+export default function Login () {
+  return (
+    <>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
@@ -88,5 +88,5 @@ export default function Login() {
         </div>
       </div>
     </>
-    );
+  )
 }
